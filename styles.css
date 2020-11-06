@@ -1,0 +1,1146 @@
+:root {
+    /*font*/
+    --color-font-white: #fff;
+    --color-font-black: #444;
+    --color-0: #d1aa2a;
+    --color-1: #d67177;
+    --color-2: #2F97C1;
+    --color-3: #1CCAD8;
+    --color-4: #A67680;
+    --color-5: #6de7a4;
+    --write-size: 20px;
+    --normal-font: 'Poiret One', 'Syncopate', sans-serif;
+    --modern-font: 'Megrim', cursive;
+    --special-font: 'Anton', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: var(--write-size);
+    font-family: var(--normal-font), sans-serif;
+    color: var(--color-font-white);
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav .menuNav {
+    display: none;
+}
+
+nav ul {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 90vw;
+}
+
+nav li {
+    min-width: 25%;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 2rem;
+    font-family: var(--modern-font);
+    letter-spacing: .2rem;
+    opacity: 0;
+    transition: letter-spacing .3s, opacity .5s;
+}
+
+.anime nav a {
+    letter-spacing: .5rem;
+    opacity: 1;
+}
+
+nav span {
+    position: relative;
+}
+
+nav span:after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    top: -40%;
+    left: -12%;
+    background: var(--color-1);
+    transform: scale(0);
+    transition: transform .3s;
+}
+
+nav a:hover span:after {
+    transform: scale(1);
+    opacity: .7;
+}
+
+nav a:hover {
+    letter-spacing: .3rem;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+
+/*LOGO */
+
+.logo {
+    position: relative;
+}
+
+.upper {
+    font-family: var(--special-font);
+    color: transparent;
+    -webkit-text-stroke: 2px var(--color-0);
+    font-size: 1.4rem;
+}
+
+.lower {
+    font-size: .8rem;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+
+
+/* ------------------------- PAGE HOME ------------------------- */
+
+.home {
+    background-image: url(./img/kingdom.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.home .titleDiv {
+    margin: 0 auto;
+    top: 30%;
+}
+
+.home h1 {
+    font-family: var(--normal-font);
+}
+
+.home .h1Text {
+    opacity: 0;
+    transition: all 1s .2s;
+}
+
+.home.anime .h1Text {
+    opacity: 1;
+}
+
+.home h1,
+.home h1 span {
+    font-size: 7rem;
+    color: #1CCAD8;
+}
+
+.home h1 span.stroke {
+    -webkit-text-stroke: 1px var(--color-0);
+    color: transparent;
+    font-family: var(--special-font);
+    transition: transform .5s ease-out;
+}
+
+.secretDiv {
+    position: relative;
+    text-align: end;
+    overflow: hidden;
+}
+
+.secretDiv span {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--color-5);
+    height: 100%;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 1s, opacity 1.5s;
+}
+
+.home div.container {
+    display: flex;
+    position: relative;
+}
+
+.home div.socialLink {
+    position: absolute;
+    display: flex;
+    left: 5%;
+    bottom: 10%;
+    z-index: 1001;
+}
+
+.home div.socialLink:after {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 40%;
+    width: 30%;
+    height: 1px;
+    background-color: var(--color-3);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all .5s;
+}
+
+.home.anime div.socialLink:after {
+    transform: scaleX(1);
+}
+
+.home div.socialLink a {
+    display: block;
+    width: 10%;
+    margin: 3%;
+    transform: translateX(60%);
+    opacity: 0;
+    transition: all .5s .3s;
+}
+
+.home.anime div.socialLink a {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.home div.socialLink a img {
+    width: 100%;
+}
+
+.home article {
+    width: 65%;
+    margin-left: 35%;
+}
+
+.home article h2 {
+    padding-top: 5%;
+    padding-left: 5%;
+    font-size: 1.4rem;
+    -webkit-text-stroke: 1px #1CCAD8;
+    color: var(--color-3);
+    font-family: var(--modern-font);
+    transform: translateX(-30%);
+    opacity: 0;
+    transition: all .5s;
+}
+
+.home.anime article h2 {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.home article p {
+    padding: 5% 10%;
+    font-size: .8rem;
+    line-height: 1.5rem;
+    transform: translateX(15%);
+    opacity: 0;
+    transition: all .5s;
+}
+
+.home.anime article p {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+/* ------------------------- PAGE Family ------------------------- */
+
+.family {
+    background: linear-gradient(45deg, rgb(86, 95, 151) 0%, rgb(86, 95, 151) 63%);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.family .backgroundText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+    margin-top: 5%;
+    font-family: var(--special-font);
+    font-size: 10rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #4e5699;
+    text-shadow: 2px 2px 3px #444, -1px -1px 5px rgb(144, 165, 193);
+    opacity: .7;
+    /*overflow: hidden;*/
+}
+
+.family .container {
+    display: flex;
+    height: 100%;
+}
+
+.family .container>div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+.family .container>div>img {
+    filter: drop-shadow(10px 10px 4px #444);
+}
+
+.family .container div>img {
+    width: 60%;
+    z-index: 2;
+}
+
+.family .container article {
+    padding: 5%;
+}
+
+.family .container div h2 span {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    font-family: var(--modern-font);
+    color: var(--color-0);
+    text-shadow: 6px 6px 3px #444;
+    transition: all .2s;
+}
+
+.family .container div h2 span:hover {
+    cursor: pointer;
+}
+
+.family .container div h2:hover span {
+    letter-spacing: .1rem;
+    color: var(--color-2);
+    text-shadow: 0px 0px #444;
+}
+
+.family .container div h2 span:before,
+.family .container div h2 span:after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-0);
+    transform: scaleX(0);
+    transition: all .2s ease-in;
+}
+
+.family .container div h2 span:before {
+    top: 0;
+    left: 0;
+    transform-origin: left;
+}
+
+.family .container div h2 span:after {
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+}
+
+.family .container div h2:hover span:before,
+.family .container div h2:hover span:after {
+    transform: scaleX(1);
+    background-color: var(--color-1);
+}
+
+.family .container div article {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.79);
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    transform: translateY(100%);
+    transition: all .5s;
+}
+
+.family .container div article.open {
+    transform: translateX(0);
+}
+
+.family article .returnBtn {
+    position: absolute;
+    width: 200px;
+    font-size: 1.5rem;
+    font-family: var(--special-font);
+    color: transparent;
+    -webkit-text-stroke: 2px var(--color-5);
+    letter-spacing: .5rem;
+    transition: all .3s;
+}
+
+.family article .returnBtn:hover {
+    cursor: pointer;
+    color: var(--color-5);
+    letter-spacing: .2rem;
+    -webkit-text-stroke: 0px var(--color-5);
+}
+
+.family article .personnage {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.family .container div:nth-child(1) .personnage img {
+    margin: 10% 20%;
+}
+
+.family .container div:nth-child(2) .personnage img {
+    margin: 10% 15%;
+}
+
+.family .container div:nth-child(3) .personnage img {
+    margin: 10% 30%;
+    width: 50%;
+}
+
+.family .container div article p {
+    width: 30%;
+    padding: 5%;
+    height: 50%;
+    align-self: center;
+    line-height: 2rem;
+    transform: translateY(-60%);
+    transition: transform .5s .2s;
+}
+
+.family .container div article.open p {
+    transform: translateY(0);
+}
+
+
+/* ------------------------- PAGE Assets ------------------------- */
+
+.assets {
+    background: linear-gradient( 45deg, #e0eafc, #cfdef3);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.assets .container {
+    flex: 1;
+    display: flex;
+    margin: 2% 0;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.assets .itemCard {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 2% 5%;
+    min-width: 20%;
+    text-align: center;
+    z-index: 1;
+}
+
+.assets .itemCard .cercle {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    border-radius: 100%;
+    border: 1px solid rgb(166, 119, 129, .5);
+    transform: scale(.5);
+    opacity: 0;
+    transition: all .3s;
+}
+
+.assets .itemCard.visible .cercle {
+    box-shadow: 0px 0px 20px rgb(166, 118, 128, .6);
+    transform: scale(.8);
+    opacity: 1;
+}
+
+.nbrItem {
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    letter-spacing: -.5rem;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.visible .nbrItem {
+    opacity: 1;
+}
+
+.assets .itemCard .nbrItem span {
+    color: #2F97C1;
+    font-size: 3rem;
+    -webkit-text-stroke: 3px #2F97C1;
+    font-family: var(--normal-font);
+    text-shadow: 8px 9px 11px #444;
+}
+
+.assets .itemCard span {
+    color: var(--color-2);
+    font-family: var(--modern-font);
+    position: relative;
+    z-index: 3;
+    font-size: 2rem;
+}
+
+.assets .itemCard span.unit {
+    position: relative;
+    font-family: var(--modern-font);
+    color: var(--color-0);
+    font-size: 1.7rem;
+}
+
+.assets .itemCard h3 {
+    position: absolute;
+    right: -5%;
+    bottom: 15%;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: 2rem;
+    -webkit-text-stroke: 0px #d67177;
+    color: #d67177;
+    text-shadow: none;
+    transition: all .3s;
+}
+
+.assets .itemCard.visible h3 {
+    color: #A67680;
+    -webkit-text-stroke: 1px #A67680;
+    text-shadow: -8px 4px 8px #444;
+}
+
+.assets .itemCard img {
+    display: block;
+    max-width: 50%;
+    margin: 0 auto;
+    opacity: 1;
+    z-index: 1;
+    position: relative;
+    padding: 2%;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px #becce0, -5px -5px 10px #e0f0ff;
+}
+
+.assets .itemCard img:active {
+    box-shadow: inset 20px 20px 60px #b0bccd, inset -20px -20px 60px #eefeff;
+}
+
+.assets .itemCard.visible img {
+    box-shadow: 20px 20px 60px #b0bccd, -20px -20px 60px #eefeff;
+}
+
+.assets div.backgroundImage {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    z-index: 0;
+}
+
+.assets div.backgroundImage img {
+    width: 100%;
+    opacity: .2;
+}
+
+.itemValue {
+    position: relative;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: .3s;
+    transition-delay: .3s;
+}
+
+.visible .itemValue {
+    transform: scaleX(1);
+    transition-delay: 0s;
+}
+
+.itemValue:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #d67177;
+    border-radius: 10px;
+    transform-origin: right;
+    transition: .3s;
+    transition-delay: 0s;
+    z-index: 55;
+}
+
+.visible .itemValue:before {
+    transform: scaleX(0);
+    transition-delay: .3s;
+}
+
+
+/* Tableau */
+
+button.btnMore {
+    margin: 2% auto;
+    height: 50px;
+    color: #444;
+    position: relative;
+    z-index: 5;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    padding: 0 2%;
+    outline: none;
+}
+
+button.btnMore:hover {
+    cursor: pointer;
+}
+
+button.btnMore:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    background-color: var(--color-1);
+    opacity: .8;
+    z-index: -1;
+    transition: width .5s;
+}
+
+button.btnMore:hover:after {
+    width: 100%;
+}
+
+.table {
+    display: none;
+}
+
+.table.open {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.table table {
+    width: 80%;
+    height: 50%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.table table td {
+    border: 1px solid #fff;
+}
+
+tr td:nth-child(1) {
+    color: var(--color-4);
+    font-size: 1rem;
+}
+
+tr td:nth-child(2) {
+    color: var(--color-2);
+    font-size: 1rem;
+}
+
+tr td:nth-child(3) {
+    color: var(--color-0);
+}
+
+
+/* ------------------------- PAGE Contact ------------------------- */
+
+.contact {
+    background: linear-gradient(45deg, rgba(99, 165, 225, 0.5) 0%, rgba(99, 165, 225, 0.5) 14.286%, rgba(93, 143, 222, 0.5) 14.286%, rgba(93, 143, 222, 0.5) 28.572%, rgba(87, 120, 218, 0.5) 28.572%, rgba(87, 120, 218, 0.5) 42.858%, rgba(81, 98, 215, 0.5) 42.858%, rgba(81, 98, 215, 0.5) 57.144%, rgba(74, 75, 211, 0.5) 57.144%, rgba(74, 75, 211, 0.5) 71.43%, rgba(68, 53, 208, 0.5) 71.43%, rgba(68, 53, 208, 0.5) 85.716%, rgba(62, 30, 204, 0.5) 85.716%, rgba(62, 30, 204, 0.5) 100.002%), linear-gradient(135deg, rgb(128, 8, 46) 0%, rgb(128, 8, 46) 14.286%, rgb(134, 43, 72) 14.286%, rgb(134, 43, 72) 28.572%, rgb(140, 77, 97) 28.572%, rgb(140, 77, 97) 42.858%, rgb(147, 112, 123) 42.858%, rgb(147, 112, 123) 57.144%, rgb(153, 146, 149) 57.144%, rgb(153, 146, 149) 71.43%, rgb(159, 181, 174) 71.43%, rgb(159, 181, 174) 85.716%, rgb(165, 215, 200) 85.716%, rgb(165, 215, 200) 100.002%);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.contact form * {
+    color: #444;
+    font-family: 'Indie Flower', cursive;
+    line-height: 1.5rem;
+}
+
+form {
+    width: 50%;
+    height: 80vh;
+    margin: 5% auto;
+    background: white;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 1% 2% 1% 8%;
+    background: -webkit-gradient(linear, 0 1, 0 100%, from(#d9eaf3), color-stop(5%, #fff)) 0 4px;
+    background-size: 100% 1.2rem;
+    position: relative;
+    overflow: hidden;
+    transform: rotate(-2deg);
+}
+
+.contact form:before {
+    /*ligne marge*/
+    content: '';
+    position: absolute;
+    width: 4px;
+    top: 0;
+    bottom: 0;
+    left: 15%;
+    border: 1px solid;
+    border-color: transparent #efe4e4;
+}
+
+fieldset {
+    margin: 3% 0;
+    border: none;
+}
+
+fieldset div {
+    margin: 3% 0;
+}
+
+input,
+select,
+.profesion,
+.contact textarea {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.contact form button {
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    width: 20%;
+    font-size: 2rem;
+    font-family: var(--special-font);
+    border: none;
+    background: transparent;
+    transition: all .3s;
+}
+
+form button:hover {
+    color: #d1aa2a;
+}
+
+form button:active {
+    outline: none;
+}
+
+
+/*----------------------------------------MEDIA QUERIES --------------------------*/
+
+@media (max-width: 600px) {
+    nav .menuNav:hover:after {
+        width: 40px !important;
+    }
+    nav.open .menuNav:after {
+        width: 114% !important;
+    }
+    .home .container article p {
+        line-height: .8rem;
+    }
+    .family .container>div {
+        margin-bottom: 5%;
+    }
+    .family .container div:nth-child(1) .personnage img,
+    .family .container div:nth-child(2) .personnage img {
+        margin: 15% 25%;
+        width: 50%;
+    }
+    .family .container div:nth-child(3) .personnage img {
+        margin-top: 25%;
+    }
+    .family .container div article p {
+        font-size: .8rem;
+    }
+    /*Family*/
+    .family .container div h2 span {
+        font-size: 1.3rem;
+    }
+    .family .container div article {
+        opacity: 0;
+    }
+    .family .container div article.open {
+        opacity: 1;
+    }
+    /*Assets */
+    .assets {
+        min-height: 100vh;
+    }
+    .assets .itemCard {
+        min-width: 55% !important;
+        max-width: 60%;
+    }
+    .nbrItem {
+        top: -60%;
+    }
+    .assets .itemCard span,
+    .assets .itemCard span.unit {
+        font-size: 1.3rem;
+    }
+    .assets .itemCard h3 {
+        font-size: 1.5rem;
+        bottom: -25%;
+    }
+    .contact {
+        height: auto;
+    }
+    form {
+        width: 90%;
+        height: auto;
+        padding: 1% 2% 1% 15%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    nav span {
+        font-size: 1.3rem;
+        -webkit-text-stroke: 1px #fff;
+    }
+    /* ---HOME--- */
+    .home {
+        background-position: 50%;
+    }
+    .home h1 {
+        left: 10%;
+        top: 20%;
+    }
+    .home h1,
+    .home h1 span {
+        font-size: 3rem;
+    }
+    .secretDiv span {
+        font-size: 1.2rem;
+    }
+    .home article h2 {
+        font-size: 1rem;
+    }
+    .home .container article p {
+        padding: 5%;
+        font-size: .6rem;
+        margin-bottom: 10%;
+    }
+    .home div.socialLink:after {
+        top: 0;
+        left: 0;
+        background-color: var(--color-1);
+    }
+    /* ---FAMILY--- */
+    .family .backgroundText {
+        display: none;
+    }
+    .family .container {
+        flex-direction: column;
+        height: 90%;
+    }
+    .family .container>div {
+        padding-top: 0;
+        justify-content: center;
+    }
+    .family .container div>img {
+        width: 30%;
+    }
+    .family .container div article.open {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .family article .returnBtn {
+        top: 2%;
+        left: 5%;
+    }
+    .family article .personnage {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .family .container div:nth-child(1) .personnage img,
+    .family .container div:nth-child(2) .personnage img {
+        margin: 0 15%;
+        width: 60%;
+    }
+    .family .container div:nth-child(3) .personnage img {
+        margin: 0 25%;
+    }
+    .family .container div article p {
+        width: 90%;
+        height: auto;
+        line-height: 1rem;
+    }
+    .assets .itemCard {
+        margin: 25% 20%!important;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        justify-content: center;
+    }
+    /* ---NAV--- */
+    nav {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 150px;
+        height: 50px;
+        z-index: 1000;
+        overflow: hidden;
+    }
+    nav.open {
+        overflow: visible;
+    }
+    nav .menuNav {
+        display: block;
+        color: #fff;
+        position: absolute;
+        top: 30%;
+        left: 15%;
+        text-transform: uppercase;
+        z-index: 10001;
+        opacity: 1;
+        letter-spacing: .5rem;
+        transition: all .3s;
+    }
+    nav.open .menuNav {
+        letter-spacing: .3rem;
+        transition: all .3s;
+    }
+    nav .menuNav:after {
+        position: absolute;
+        top: -40%;
+        left: -14%;
+        z-index: -1;
+        content: "";
+        height: 40px;
+        width: 40px;
+        border-radius: 100px;
+        background: var(--color-1);
+        transition: all .3s;
+    }
+    nav .menuNav:hover {
+        cursor: pointer;
+        letter-spacing: .3rem;
+    }
+    nav .menuNav:hover:after,
+    nav.open .menuNav:after {
+        width: 114%;
+        opacity: .7;
+    }
+    nav ul {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        transform: translateY(-100%);
+    }
+    nav.open ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: var(--color-5);
+        height: 100vh;
+        transform: translateY(0);
+        transition: all .5s;
+    }
+    nav.open li {
+        height: 15%;
+    }
+    nav.open li a {
+        font-size: 1.5rem;
+    }
+    nav span {
+        font-size: 1.3rem;
+        -webkit-text-stroke: 1px #fff;
+    }
+    .home .titleDiv {
+        padding: 0 5%;
+    }
+    /*Assets*/
+    .assets {
+        overflow: scroll;
+    }
+    .assets .container {
+        margin: 10% 0;
+    }
+    .assets .itemCard {
+        min-width: 30%;
+        margin: 10% 5%;
+    }
+    form {
+        min-height: 90vh;
+    }
+}
+
+
+/* SECRET CLICK */
+
+
+/*popUp*/
+
+.secretQuest {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    opacity: 0;
+    transition: all .5s;
+}
+
+.secretQuest * {
+    display: none;
+}
+
+.secretQuest.open {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.secretQuest.open * {
+    display: initial;
+}
+
+.secretQuest.open article {
+    position: relative;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 2%;
+    border-radius: 50px;
+}
+
+.secretQuest.open article img {
+    position: absolute;
+    right: 15%;
+    bottom: 10%;
+    width: 10%;
+}
+
+.secretQuest.open article h2 {
+    display: block;
+    font-size: 2rem;
+}
+
+.secretQuest.open article p {
+    display: block;
+    font-size: 1rem;
+}
+
+.secretQuest.open article button {
+    width: 10%;
+    padding: 2%;
+    margin: 0 45%;
+    background: transparent;
+    border: none;
+    transform: scale(1.7);
+    outline: none;
+    color: #d67177;
+    letter-spacing: .5rem;
+    transition: all .3s;
+}
+
+.secretQuest.open article button:hover {
+    transform: scale(1.5);
+    letter-spacing: .2rem;
+    color: #6de7a4;
+    cursor: pointer;
+}
+
+
+/* Compteur Click */
+
+.cptClick {
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 100%;
+    border: 2px solid #6de7a4;
+    z-index: 100000;
+}
+
+.cptClick:hover {
+    cursor: pointer;
+}
+
+.cptClick img {
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    opacity: 0.8;
+}
+
+
+/*Clik animation */
+
+.family .container div>img.found {
+    transform: rotate(10deg);
+    transform-origin: left;
+}
+
+.family .container div h2.found span {
+    color: #6de7a4;
+}
+
+.logo.found .upper {
+    -webkit-text-stroke: 2px var(--color-1);
+}
+
+.logo.found .lower {
+    position: relative;
+    left: 0%;
+    bottom: 0;
+    font-size: 1.4rem;
+    -webkit-text-stroke: 2px var(--color-1);
+    color: transparent;
+    font-family: var(--special-font);
+}
+
+.secretDiv.found span {
+    transform: translateY(0);
+    opacity: 1;
+}

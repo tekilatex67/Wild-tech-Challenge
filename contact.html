@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact</title>
+    <link rel="icon" type="" href="./img/crown.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Krub&family=Montserrat+Alternates&family=Noto+Sans&family=Raleway+Dots&family=Syncopate&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lobster&family=Lobster+Two:ital@1&family=Megrim&family=Playball&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Codystar&family=Fredericka+the+Great&family=Nanum+Brush+Script&family=Poiret+One&family=Vast+Shadow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <section class="contact">
+
+        <header>
+            <div class="logo">
+                <span class="upper">K</span>
+                <span class="lower">of</span>
+                <span class="upper">C</span>
+            </div>
+            <nav class="">
+                <div class="menuNav">Menu</div>
+                <ul>
+                    <li><a href="file:///Users/klipfelnicolas/Desktop/dossier%20web/Projet/Wild%20tech%20Challenge/home.html"><span>Home</span></a></li>
+                    <li><a href="file:///Users/klipfelnicolas/Desktop/dossier%20web/Projet/Wild%20tech%20Challenge/family.html"><span>Royal Family</span></a></li>
+                    <li><a href="file:///Users/klipfelnicolas/Desktop/dossier%20web/Projet/Wild%20tech%20Challenge/assets.html"><span>Royal Assets</span></a></li>
+                    <li><a href="file:///Users/klipfelnicolas/Desktop/dossier%20web/Projet/Wild%20tech%20Challenge/contact.html"><span>Contact Us</span></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="cptClick">
+            <span>0/7</span>
+            <img src="./img/clicker.png" alt="icone de click" />
+        </div>
+
+        <div class="secretQuest ">
+            <article>
+                <h2>Welcome</h2>
+                <p>
+                    The kingdom of colchis is happy to welcome you to its new site, and for the occasion, the king has put part of his treasure into play. To win it, you just need to find the 7 secrets of the kingdom.<br> 7 hidden clicks will open the
+                    doors of the treasure.<br> Good luck , and click everywhere !
+                </p>
+                <button class="btnOk">OK</button>
+                <img src="./img/crown.png" alt="icon de couronne" />
+            </article>
+        </div>
+
+        <div class="container">
+            <form>
+
+                <fieldset class="personalData">
+
+                    <div>
+                        <div>
+                            <label for="name">Name : </label>
+                            <input type="text" name="Nom" id="Nom" required autocomplete="off">
+                        </div>
+                        <div>
+                            <label for="firstname">First name : </label>
+                            <input type="text" name="firstname" id="firstname" required autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <label for="birth">Birth : </label>
+                            <input type="date" name="Birth" id="birth" required>
+                        </div>
+                        <div>
+                            <label for="nationality">Nationality : </label>
+                            <select form="nationality" id="nationality">
+                                <option value="greek" selected>Greek</option>
+                                <option value="persian">Persian</option>
+                                <option value="ottoman">Ottoman</option>
+                                <option value="gallic">Gallic</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="profesion">Profesion :</label>
+
+                        <input type="radio" name="profesion" value="heros" required>
+                        <label class="profesion" for="hero">Hero</label>
+                        <input type="radio" name="profesion" value="soldier">
+                        <label class="profesion" for="soldier">Soldier/Guard</label>
+                        <input type="radio" name="profesion" value="farmer">
+                        <label class="profesion" for="farmer">Farmer</label>
+                        <input type="radio" name="profesion" value="slave">
+                        <label class="profesion" for="slave">Slave</label>
+                    </div>
+
+                </fieldset>
+
+                <fieldset class="mail">
+                    <div>
+                        <label for="mail">E-m@il : </label>
+                        <input type="mail" name="mail" autocomplete="off" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="message">
+                    <p>Message :</p>
+                    <textarea name="message" maxlength="500" rows="8" cols="60"></textarea>
+                </fieldset>
+                <button type="submit">Envoyer</button>
+        </div>
+
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
