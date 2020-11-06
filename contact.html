@@ -1,20 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Royal Family</title>
+    <title>Contact</title>
     <link rel="icon" type="" href="./img/crown.png" />
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Krub&family=Montserrat+Alternates&family=Noto+Sans&family=Raleway+Dots&family=Syncopate&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lobster&family=Lobster+Two:ital@1&family=Megrim&family=Playball&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Codystar&family=Fredericka+the+Great&family=Nanum+Brush+Script&family=Poiret+One&family=Vast+Shadow&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <section class="family">
+
+    <section class="contact">
+
         <header>
             <div class="logo">
                 <span class="upper">K</span>
@@ -31,9 +35,6 @@
                 </ul>
             </nav>
         </header>
-        <div class="backgroundText">
-            Royal family <br>of <br> colchis
-        </div>
 
         <div class="cptClick">
             <span>0/7</span>
@@ -53,53 +54,63 @@
         </div>
 
         <div class="container">
-            <div>
-                <img src="./img/princessTab.png" alt="Tableau de la princesse" />
-                <h2 id="Madeas"><span>Princess <br> Madeas</span></h2>
+            <form>
 
-                <article data-name="Madeas" class="">
-                    <span class="returnBtn">Retour</span>
-                    <div class="personnage">
-                        <img src="./img/princess.png" alt="image de la princesse" />
+                <fieldset class="personalData">
+
+                    <div>
+                        <div>
+                            <label for="name">Name : </label>
+                            <input type="text" name="Nom" id="Nom" required autocomplete="off">
+                        </div>
+                        <div>
+                            <label for="firstname">First name : </label>
+                            <input type="text" name="firstname" id="firstname" required autocomplete="off">
+                        </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur fugiat harum eius nulla voluptatibus voluptates? Dolores suscipit alias doloribus dolore aspernatur ullam! Saepe voluptate aperiam dolor fugit minima, blanditiis
-                        qui!
-                    </p>
-                </article>
-            </div>
 
-            <div>
-                <img src="./img/kingTab.png" alt="Tableau du roi" id="kingTab" class="secretClick" />
-
-                <h2 id="Aeetes"><span>King <br> Aeetes</span></h2>
-
-                <article data-name="Aeetes" class="">
-                    <span class="returnBtn">Retour</span>
-                    <div class="personnage">
-                        <img src="./img/king.png" alt="image du roi" />
+                    <div>
+                        <div>
+                            <label for="birth">Birth : </label>
+                            <input type="date" name="Birth" id="birth" required>
+                        </div>
+                        <div>
+                            <label for="nationality">Nationality : </label>
+                            <select form="nationality" id="nationality">
+                                <option value="greek" selected>Greek</option>
+                                <option value="persian">Persian</option>
+                                <option value="ottoman">Ottoman</option>
+                                <option value="gallic">Gallic</option>
+                        </select>
+                        </div>
                     </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas incidunt minima dolorem tempora quaerat, commodi optio distinctio facere. Hic possimus perferendis repellat nostrum harum placeat quis nihil, laborum et dignissimos.
-                    </p>
-                </article>
-            </div>
+                    <div>
+                        <label for="profesion">Profesion :</label>
 
-            <div>
-                <img src="./img/queenTab.png" alt="Tableau de la reine" />
-                <h2 id="Idyia" class="secretClick">
-                    <span>Queen <br> Idyia</span>
-                </h2>
-
-                <article data-name="Idyia" class="">
-                    <span class="returnBtn">Retour</span>
-                    <div class="personnage">
-                        <img src="./img/queen.png" alt="image de la reine" />
+                        <input type="radio" name="profesion" value="heros" required>
+                        <label class="profesion" for="hero">Hero</label>
+                        <input type="radio" name="profesion" value="soldier">
+                        <label class="profesion" for="soldier">Soldier/Guard</label>
+                        <input type="radio" name="profesion" value="farmer">
+                        <label class="profesion" for="farmer">Farmer</label>
+                        <input type="radio" name="profesion" value="slave">
+                        <label class="profesion" for="slave">Slave</label>
                     </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia est error ipsam perspiciatis, laboriosam distinctio rerum facilis officia modi at quae, reprehenderit iste ex accusantium. Accusantium vero asperiores totam aliquid!
-                    </p>
-                </article>
-            </div>
+
+                </fieldset>
+
+                <fieldset class="mail">
+                    <div>
+                        <label for="mail">E-m@il : </label>
+                        <input type="mail" name="mail" autocomplete="off" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="message">
+                    <p>Message :</p>
+                    <textarea name="message" maxlength="500" rows="8" cols="60"></textarea>
+                </fieldset>
+                <button type="submit">Envoyer</button>
         </div>
 
     </section>
